@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Boil No Oil Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/images/lg.png" alt="Logo" style="height: 120px; vertical-align: middle; margin-right: 15px;">
+            No Boil No Oil Event Registration
+        </h1>
+        <form id="registration-form" onsubmit="submitForm(event)">
+            <label for="participant-name">Participant's Name:</label>
+            <input type="text" id="participant-name" name="participant-name" required>
+
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" name="father-name" required>
+
+            <label for="mother-name">Mother's Name:</label>
+            <input type="text" id="mother-name" name="mother-name" required>
+
+            <label for="age">Age:</label>
+            <select id="age" name="age" required>
+                <option value="">Select Age</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="payment">Payment (99 INR):</label>
+            <button type="button" id="show-qr" onclick="showQR()">Pay Now</button>
+
+            <div id="qr-code" style="display: none;">
+                <img src="/images/qr.jpeg" alt="QR Code" style="width: 300px; height: 350px;">
+                <p>Scan to make payment.</p>
+
+                <label>
+                    <input type="checkbox" id="payment-checkbox" onchange="toggleTransactionId()"> I have paid
+                </label>
+                <div id="transaction-id-container" style="display: none;">
+                    <label for="transaction-id">Enter Transaction ID:</label>
+                    <input type="text" id="transaction-id" name="transaction-id">
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn" style="display: none;">Submit</button>
+        </form>
+
+        <div id="success-message" style="display: none;">
+            <p id="success-text">Form submitted successfully!</p>
+            <p id="participation-id-message">Your Participation ID: <span id="id-value"></span></p>
+            <div>
+                <a id="whatsapp-link" href="https://wa.me/9514900068" target="_blank">
+                    <span>Send Screenshot on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
