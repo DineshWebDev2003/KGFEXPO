@@ -42,17 +42,58 @@ body {
 }
 
 /* Heading Styling */
+/* Styling for the h1 element */
 h1 {
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #ff5722;
-    background: linear-gradient(90deg, #ff9800, #ff5722);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    animation: bounce 2s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
 }
+
+/* Logo Image Styling */
+.logo {
+    height: auto;
+    max-width: 25vw; /* Adjust based on the viewport width */
+    margin-right: 15px;
+    vertical-align: middle;
+    object-fit: contain; /* Keeps aspect ratio intact */
+}
+
+/* Responsive Adjustments for Different Screen Sizes */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        max-width: 20vw; /* Logo becomes smaller on larger tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        max-width: 30vw; /* Logo becomes larger on smaller screens like tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        max-width: 40vw; /* Logo is bigger on mobile screens */
+    }
+}
+
 
 /* Bounce Animation */
 @keyframes bounce {
