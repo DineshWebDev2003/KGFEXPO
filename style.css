@@ -44,14 +44,15 @@ body {
 /* Heading Styling */
 /* Styling for the h1 element */
 h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
     text-align: center;
-    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite alternate;
 }
 
 /* Logo Image Styling */
